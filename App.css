@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("./assets/header_backaground.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.page-container {
+  background-color: rgba(0, 0, 0, 0.295);
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(2, 130px);
+}
+
+.heading {
+  text-align: center;
+  padding-top: 20px;
+  color: white;
+  font-weight: 900;
+  font-size: 50px;
+}
+
+.searchContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchContainer input {
+  font-weight: 900;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+  border-bottom: 2px solid gray;
+  outline: none;
+  font-style: italic;
+  background-color: transparent;
+  color: white;
+}
+
+.searchContainer input::placeholder {
+  color: white;
+}
+
+.searchContainer button {
+  background-color: white;
+  font-weight: 900;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  padding: 3px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  font-style: italic;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.searchContainer button::after {
+  content: "🔍";
+  padding: 5px;
+}
+
+.messageBox {
+  display: grid;
+  place-items: center;
+  .message {
+    background-color: rgb(253, 85, 56);
+    padding: 5px 10px;
+    color: rgb(255, 255, 255);
+    border-radius: 4px;
+    box-shadow: 0px 0px 9px 7px #3b5f9787;
+  }
+}
+
+.wetherResultContainer {
+  display: grid;
+  place-items: center;
+  .imageContainer {
+    background-color: white;
+    padding: 40px;
+    display: inline-flex;
+    border-radius: 10px;
+  }
+  .detailsContainer {
+    display: flex;
+    justify-content: space-between;
+    .weatherCity,
+    .weatherTemp {
+      color: white;
+      font-size: 22px;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .searchContainer {
+    flex-direction: column;
+  }
+  .message {
+    font-size: 27px;
+  }
+}
